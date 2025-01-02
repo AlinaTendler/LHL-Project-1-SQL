@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-This is a training project. The main goal is to apply new skills and perform the following actions:
+This is a training project. The main goal is to apply new skills and knowledge to perform the following actions:
   - create database and tables;
   - import data from CSV to the newly created database;
   - clean data;
