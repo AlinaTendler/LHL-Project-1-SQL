@@ -1,11 +1,18 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+This is a training project. The main goal is to apply new skills and perform the following actions:
+  - create database and tables;
+  - import data from CSV to the newly created database;
+  - clean data;
+  - answer questions;
+  - find new insights from the data;
+  - test data;
+  - create ERD.
+
 
 ## Process
-### (your step 1)
-### (your step 2)
+  1. Downloading and examining CSV files: Before importing data into the database, I 
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
