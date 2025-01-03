@@ -12,7 +12,7 @@ HAVING SUM(units_sold*unit_price) IS NOT NULL
 ```sql
 SELECT SUM(units_sold*unit_price), city
 FROM public.analytics an
-JOIN public.all_sessions al ON an."visitId"=al."visitId"
+JOIN public.all_sessions al ON an.visitId=al.visitId
 GROUP BY city
 HAVING SUM(units_sold*unit_price) IS NOT NULL
 ```
