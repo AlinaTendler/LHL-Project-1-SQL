@@ -26,17 +26,32 @@ The query is very  simple, but the problem is that we don't have enough data to 
 The most complete information we probably can get is from the analytics table, by multiplying *units_sold* by *unit_price* (it has 2549 values). And it will give us United States with 1501.71 and Pittsburgh with 239.84 results.
 
 
+## Question 2: What is the average number of products ordered from visitors in each city and country?
 
+### SQL Query:
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
-
-
-SQL Queries:
-
-
+```sql
+SELECT AVG(units_sold), country
+FROM public.analytics an
+JOIN public.all_sessions al ON an.visitId=al.visitId
+GROUP BY country
+HAVING AVG(units_sold) IS NOT NULL
+```
+```sql
+SELECT AVG(units_sold), city
+FROM public.analytics an
+JOIN public.all_sessions al ON an.visitId=al.visitId
+GROUP BY city
+HAVING AVG(units_sold) IS NOT NULL
+```
 
 Answer:
 
+| AVG_Number    | Country       |
+| ------------- |:-------------:|
+| 1.67          | United States |
+| 1.00          | Egypt         |
+| 1.00          | India         |
 
 
 
