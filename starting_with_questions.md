@@ -9,21 +9,21 @@ JOIN public.all_sessions al ON an.visitId=al.visitId
 GROUP BY country
 HAVING SUM(units_sold*unit_price) IS NOT NULL
 ```
-'''sql
+```sql
 SELECT SUM(units_sold*unit_price), city
 FROM public.analytics an
 JOIN public.all_sessions al ON an."visitId"=al."visitId"
 GROUP BY city
 HAVING SUM(units_sold*unit_price) IS NOT NULL
-'''
+```
 
 ### Answer: 
 
-**United States.**
+**United States and Pittsburgh.**
 
 The query is very  simple, but the problem is that we don't have enough data to provide the answer, *transactionRevenue* column in *all_sessions* table has only 4 values, and *totalTransactionRevenue* has only 80 values, which is more, but yet not enough to provide the answer. We could simply multiply *productQuantity* by *productPrice*, but *productQuantity* has only 53 values. 
 
-The most complete information we probably can get is from the analytics table, by multiplying *units_sold* by *unit_price* (it has 2549 values). And it will give us United States with 1501.71 result.
+The most complete information we probably can get is from the analytics table, by multiplying *units_sold* by *unit_price* (it has 2549 values). And it will give us United States with 1501.71 and Pittsburgh with 239.84 results.
 
 
 
