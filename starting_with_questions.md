@@ -5,7 +5,7 @@
 ```sql
 SELECT SUM(units_sold*unit_price), country
 FROM public.analytics an
-JOIN public.all_sessions al ON an."visitId"=al."visitId"
+JOIN public.all_sessions al ON an.visitId=al.visitId
 GROUP BY country
 HAVING SUM(units_sold*unit_price) IS NOT NULL
 ```
