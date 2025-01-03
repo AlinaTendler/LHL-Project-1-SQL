@@ -47,14 +47,23 @@ HAVING AVG(units_sold) IS NOT NULL
 
 Answer:
 
-| AVG_Number    | Country       |
-| ------------- |:-------------:|
-| 1.67          | United States |
-| 1.00          | Egypt         |
-| 1.00          | India         |
+| AVG_Number | Country       |
+| ---------- |:-------------:|
+| 1.67       | United States |
+| 1.00       | Egypt         |
+| 1.00       | India         |
 
-
-
+| AVG_Number | City          |
+| ---------- |:-------------:|
+| 1.00	     | Austin        |
+| 1.00	     | San Francisco | 
+| 4.00	     | Pittsburgh    |
+| 1.00       | Palo Alto     |
+| 2.00	     | Houston       |
+| 1.00	     | San Bruno     |
+| 1.00	     | Ann Arbor     |
+| 1.00	     | Mountain View |
+| 1.00	     | Sunnyvale     |
 
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
