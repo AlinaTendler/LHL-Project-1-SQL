@@ -65,14 +65,12 @@ Answer:
 | 1.00	     | Mountain View |
 | 1.00	     | Sunnyvale     |
 
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
+## Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
+
+### SQL Query:
 
 
-SQL Queries:
-
-
-
-Answer:
+### Answer:
 
 
 
