@@ -16,7 +16,14 @@ This is a training project. The main goal is to perform the following actions us
   2. Downloading and examining CSV files: Before importing data into the database, I "pre-cleaned" it (trimmed, removed duplicates, etc.) in Google Spreadsheets. For more details, please take a look at cleaning_data.md.
   3. Cleaning and normalization (3NF): removing duplicated rows and columns, formatting, identifying Primary and Foreign keys, verifying data, and deleting improper data. Please take a look at cleaning_data.md.
   4. Answering questions:
-  5. 
+     
+     1) Which cities and countries have the highest level of transaction revenues on the site?
+     2) What is the average number of products ordered from visitors in each city and country?
+     3) Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
+     4) What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
+     5) Can we summarize the impact of revenue generated from each city/country?
+
+  5. Looking for new insights from the data
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
