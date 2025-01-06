@@ -23,7 +23,7 @@ HAVING SUM(units_sold*unit_price) IS NOT NULL
 
 The query is very  simple, but the problem is that we don't have enough data to provide the answer, *transactionRevenue* column in *all_sessions* table has only 4 values, and *totalTransactionRevenue* has only 80 values, which is more, but yet not enough to provide the answer. We could simply multiply *productQuantity* by *productPrice*, but *productQuantity* has only 53 values. 
 
-The most complete information we probably can get is from the analytics table, by multiplying *units_sold* by *unit_price* (it has 2549 values). And it will give us United States with 1501.71 and Pittsburgh with 239.84 results.
+The most complete information we can probably get from the analytics table, by multiplying *units_sold* by *unit_price* (it has 2549 values). And it will give us United States with 1501.71 and Pittsburgh with 239.84 results.
 
 
 ## Question 2: What is the average number of products ordered from visitors in each city and country?
