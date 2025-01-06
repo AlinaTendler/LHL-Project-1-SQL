@@ -14,7 +14,7 @@ This is a training project. The main goal is to perform the following actions us
 ## Process
   1. Creating a database and tables. I created a database and tables using the pgAdmin interface, where I specified formats and constraints. 
   2. Downloading and examining CSV files: Before importing data into the database, I "pre-cleaned" it (trimmed, removed duplicates, etc.) in Google Spreadsheets. For more details, please take a look at cleaning_data.md.
-  3. Cleaning and normalization (3NF): removing duplicated rows and columns, formatting, identifying Primary and Foreign keys, verifying data, and deleting improper data. Please take a look at cleaning_data.md.
+  3. Cleaning and normalization (3NF): removing duplicated rows and columns, identifying Primary and Foreign keys, formatting, verifying data, and deleting improper data. Please take a look at cleaning_data.md.
   4. Answering questions:
      
      1) Which cities and countries have the highest level of transaction revenues on the site?
