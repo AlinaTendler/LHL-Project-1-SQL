@@ -121,7 +121,7 @@ WHERE p.product_sku IS NULL
 DROP TABLE sales_report
 ```
 
-### sales_by_SKU
+### sales_by_SKU table
 
 1. There were productsku in sales_by_sku not in products. I inserted those rows into products and deleted sales_by_sku.
 
