@@ -19,3 +19,33 @@ Before importing all the data I checked the raw data.
 1. Name column was trimmed. 
 2. Format for quantity was fixed.
 3. Empty columns and rows were deleted.
+
+
+ 
+## Cleaning
+ 
+ 
+### analytics table
+
+1. Table contained 4 000 000+ rows. I assumed that there are a lof of duplicates
+
+#number of rows and number of unique values for analytics
+
+
+select count(*), count(distinct fullvisitorId), count(distinct userid), count(distinct visitId)
+from public.analytics
+
+"count"	"count-2"	"count-3"	"count-4"
+4301122	120018	0	148642
+
+2. UserID didn’t have any values, I dropped this column 
+
+ALTER TABLE public.analytics DROP COLUMN userid
+
+
+3. VisitStartTime column was duplicated VisitId column in all_sessions table. I dropped it.
+
+4. socialEngagementType column contained only 1 value for all rows, I dropped it
+
+select count(socialEngagementType) from public.analytics
+where socialEngagementType='Not Socially Engaged'
