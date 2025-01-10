@@ -54,3 +54,47 @@ SELECT count(socialEngagementType)
 FROM public.analytics
 Where socialEngagementType='Not Socially Engaged'
 ```
+
+5. VisitorID should be a unique value, so I deleted all the duplicates using VisitorID
+
+```SQL
+DELETE T
+FROM
+(
+SELECT *, DupRank = ROW_NUMBER()
+OVER (
+     PARTITION BY visitorid
+     ORDER BY (SELECT NULL)
+     )
+FROM analytics
+) AS T
+WHERE DupRank > 1
+```
+
+7. Formatting dates
+
+```SQL
+ALTER TABLE public.analytics
+ADD COLUMN proper_date date;
+UPDATE public.analytics
+SET proper_date = to_date(date::text, 'YYYYMMDD') 
+SELECT date,proper_date FROM public.analytics
+```
+(then rename and drop old)
+
+8. Unit_price looked strange, divided by 1000000
+
+```SQL
+ALTER TABLE public.analytics
+ADD COLUMN proper_unit_price float;
+UPDATE public.analytics
+SET proper_unit_price = unit_price/1000000
+```
+(then rename and drop old)
+
+
+9. Dividing revenue by 1000000, without a new column
+
+```SQL
+UPDATE public.analytics SET revenue = revenue/1000000
+```
