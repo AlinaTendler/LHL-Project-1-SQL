@@ -27,7 +27,7 @@ Before importing all the data I checked the raw data.
  
 ### analytics table
 
-1. Table contained 4301122 rows. I assumed that there are a lof of duplicates
+1. Table contained 4301122 rows. I assumed that there are a lot of duplicates
 
 #number of rows and number of unique values for analytics
 
@@ -45,7 +45,7 @@ FROM public.analytics
 ALTER TABLE public.analytics DROP COLUMN userid
 ```
 
-3. VisitStartTime column was a duplicate of VisitId column in all_sessions table. I dropped it.
+3. VisitStartTime column was a duplicate of VisitId column in all_sessions table. I deleted it.
 
 4. socialEngagementType column contained only 1 value for all rows, I dropped it
 
