@@ -49,5 +49,8 @@ ALTER TABLE public.analytics DROP COLUMN userid
 
 4. socialEngagementType column contained only 1 value for all rows, I dropped it
 
-select count(socialEngagementType) from public.analytics
-where socialEngagementType='Not Socially Engaged'
+```sql
+SELECT count(socialEngagementType) 
+FROM public.analytics
+Where socialEngagementType='Not Socially Engaged'
+```
