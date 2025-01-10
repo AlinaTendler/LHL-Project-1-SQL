@@ -32,17 +32,18 @@ Before importing all the data I checked the raw data.
 #number of rows and number of unique values for analytics
 
 ```sql
-select count(*), count(distinct fullvisitorId), count(distinct userid), count(distinct visitId)
-from public.analytics
+SELECT count(*), count(distinct fullvisitorId), count(distinct userid), count(distinct visitId)
+FROM public.analytics
 ```
+| count      | count-2      |count-3     | count-4     |
+| ---------- | ------------ | ---------- |------------:|
+| 4301122	   | 120018       | 0          | 148642      |
 
+2. UserID didn’t have any values, so I dropped this column. 
 
-
-
-2. UserID didn’t have any values, I dropped this column 
-
+```sql
 ALTER TABLE public.analytics DROP COLUMN userid
-
+```
 
 3. VisitStartTime column was duplicated VisitId column in all_sessions table. I dropped it.
 
