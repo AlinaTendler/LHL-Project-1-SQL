@@ -28,7 +28,7 @@ This is a training project. The main goal is to perform the following actions us
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
-(discuss challenges you faced in the project)
-
+There was no documentation, so it was hard to understand what each column represented only by its name. Logically, visitorID should be a unique value in all_sessions and analytics, but analytics, for example, had over 4 000 000 duplicates by visitorID. 
+ 
 ## Future Goals
-(what would you do if you had more time?)
+If it was a real task, I would doubt the reliability of the data and check thoroughly how it was gained and processed. All the results I received don't seem to be reliable.
