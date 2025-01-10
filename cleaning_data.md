@@ -36,9 +36,8 @@ select count(*), count(distinct fullvisitorId), count(distinct userid), count(di
 from public.analytics
 ```
 
----------------------------
-|4301122|	120018	|0|	148642
----------------------------
+
+
 
 2. UserID didn’t have any values, I dropped this column 
 
