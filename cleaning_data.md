@@ -16,6 +16,6 @@ Before importing all the data I checked the raw data.
 
 ### products.csv 
 
-1. Name was trimmed 
-2. Format for quantity was fixed
-3. Empty columns and rows are deleted
+1. Name column was trimmed. 
+2. Format for quantity was fixed.
+3. Empty columns and rows were deleted.
