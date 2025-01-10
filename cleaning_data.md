@@ -82,7 +82,7 @@ SELECT date,proper_date FROM public.analytics
 ```
 (then rename and drop old)
 
-8. Unit_price looked strange, divided by 1000000
+8. Unit_price divided by 1000000
 
 ```SQL
 ALTER TABLE public.analytics
@@ -93,7 +93,7 @@ SET proper_unit_price = unit_price/1000000
 (then rename and drop old)
 
 
-9. Dividing revenue by 1000000, without a new column
+9. Revenue divided by 1000000, without a new column
 
 ```SQL
 UPDATE public.analytics SET revenue = revenue/1000000
