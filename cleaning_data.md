@@ -27,7 +27,7 @@ Before importing all the data I checked the raw data.
  
 ### analytics table
 
-1. Table contained 4 000 000+ rows. I assumed that there are a lof of duplicates
+1. Table contained 4301122 rows. I assumed that there are a lof of duplicates
 
 #number of rows and number of unique values for analytics
 
