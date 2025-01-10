@@ -11,7 +11,7 @@ Before importing all the data I checked the raw data.
 5. Time format converted to proper format =INT(C2/100)/24+MOD(C2,100)/1440
 6. Date format converted to proper format =DATE(LEFT(J2,4),MID(J2,5,2),RIGHT(J2,2))
 7. Columns without headers and data deleted.
-8. Columns with headers and without data deleted for instance Search Keyword and productRefundAmount. 
+8. Columns with headers and without data deleted (Search Keyword and productRefundAmount). 
 
 
 ### products.csv 
