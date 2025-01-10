@@ -22,7 +22,7 @@ Before importing all the data I checked the raw data.
 
 
  
-## Cleaning
+## Data Cleaning
  
  
 ### analytics table
