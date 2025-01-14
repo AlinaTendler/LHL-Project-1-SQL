@@ -64,15 +64,32 @@ FROM public.all_sessions
 ### SQL Queries:
 
 ```SQL
-SELECT count (pagePathLevel1) from public.all_sessions
-where pagePathLevel1 = '/google+redesign/'
+SELECT count (pagePathLevel1)
+FROM public.all_sessions
+WHERE pagePathLevel1 = '/google+redesign/'
 ```
 
 ### Answer:
 13401 rows out of 14172 have the same value '/google+redesign/'. So we can't use this column for analyze.
 
-## Question 5: 
+## Question 5: Which traffic channel brings us most visitors?
 
 ### SQL Queries:
 
-Answer:
+```SQL
+SELECT "channelGrouping", COUNT("channelGrouping")
+FROM public.analytics
+GROUP BY "channelGrouping"
+ORDER BY count("channelGrouping") DESC
+```
+
+### Answer:
+
+"Organic Search" -	75557
+"Referral"-	28381
+"Direct" - 25545
+"Social" - 11662
+"Paid Search" -	4649
+"Affiliates" -	1688
+"Display"	- 1158
+"(Other)"	- 2
