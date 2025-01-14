@@ -34,11 +34,17 @@ This is a training project. The main goal is to perform the following actions us
        - Duplicated rows (i.e. rows with the same visitID)
          
   7. ERD Generation. Please see the pic
+
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+
+1. I cleaned the data and attempted to normalize it.
+2. Answered all 5 questions.
+3. Found 5 more insights.
+4. Mentioned potential problems and queries to prevent them during QA.
+5. Created ERD.
 
 ## Challenges 
-There was no documentation, so it was hard to understand what each column represented only by its name. Logically, visitorID should be a unique value in all_sessions and analytics, but analytics, for example, had over 4 000 000 duplicates by visitorID. 
+There was no documentation, so it was hard to understand what each column represented only by its name. Logically, visitorID should be a unique value in all_sessions and analytics, but analytics, for example, had over 4 000 000 duplicates by visitorID. Information was incomplete for almost all the questions: I tried to use the most complete information I had, so for example, when I didn't have enough data for revenue, I used sum(quantity*price) to get more information. 
  
 ## Future Goals
 If it were a real task, I would doubt the data's reliability and thoroughly check how it was gained and processed. All the results I received are not reliable. Also, if I had more time, I would check "full-duplicates" instead of relying on logic and deleting duplicates by visitID. And I would resolve the issue with the Primary Key because I have 1 primary key for two tables.
