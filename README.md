@@ -25,13 +25,14 @@ This is a training project. The main goal is to perform the following actions us
 
   5. Looking for new insights from the data. Analyzing and trying to get 5 more useful question-answers from the data.
   6. Data QA. Checking for:
+     
        - Improper characters (i.e. ${% in categories name)
        - Incorrect formatting (i.e. date as varchar)
        - Non-null missing values (i.e. like (not set) or (not available in demo version))
        - Impossible/ Outlier values (i.e. prices of millions of dollars)
        - Misaligned values (i.e. revenue and product of quantity and price)
        - Duplicated rows (i.e. rows with the same visitID)
-And many, many more!
+         
   7. ERD Generation. Please see the pic
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
