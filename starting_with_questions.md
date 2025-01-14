@@ -73,33 +73,15 @@ Answer:
 
 ```sql
 CREATE VIEW questions3and4 AS
-SELECT
-    country,
-	city,
-    "productQuantity",
-    "productPrice",
-    "v2ProductCategory",
-    "productSKU"
-FROM
-    public.all_sessions
-WHERE
-   "productQuantity" > 0
+SELECT country, city, productQuantity, productPrice, v2ProductCategory, productSKU
+FROM public.all_sessions
+WHERE productQuantity > 0
 ```
 ```sql
-SELECT 
-    "productSKU",
-    country,
-	city,
-    "productQuantity",
-    "productPrice",
-    "v2ProductCategory",
-    p.name
-FROM 
-    questions3and4 q3 
-INNER JOIN 
-    products p
-ON 
-    q3."productSKU" = "SKU"
+SELECT productSKU, country, city, productQuantity, productPrice, v2ProductCategory, p.name
+FROM questions3and4 q3 
+INNER JOIN products p
+ON q3."productSKU" = "SKU"
 ORDER BY country
 ```
 
@@ -111,9 +93,23 @@ Visitors from USA order many security cameras, thermostats and smoke alarms.
 
 SQL Queries:
 
+```sql
+SELECT country, ROUND(SUM(productQuantity*productPrice) / (SELECT SUM(productQuantity*productPrice) FROM all_sessions), 2) AS proportion_of_all_revenues
+FROM all_sessions
+GROUP BY country
+ORDER BY proportion_of_all_revenues DESC, country
+```
 
 
-Answer:
+```sql
+SELECT country, ROUND(SUM(productQuantity*productPrice) / (SELECT SUM(productQuantity*productPrice) FROM all_sessions), 2) AS proportion_of_all_revenues
+FROM all_sessions
+GROUP BY city
+ORDER BY proportion_of_all_revenues DESC, city
+```
+
+Answer: USA brings 93% of revenue, 2% Argentina, Ireland, Spain and 1% - Canada. 
+        Mountain View brings 13%, Salem - 11%, New York - 10%.
 
 
 
