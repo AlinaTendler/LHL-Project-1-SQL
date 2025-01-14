@@ -53,7 +53,7 @@ Top-5 products by Revenue:
 ### SQL Queries:
 
 ```SQL
-SELECT count(*), count(country) AS country, count(city) AS city
+SELECT COUNT(*), COUNT(country) AS country, COUNT(city) AS city
 FROM public.all_sessions
 ```
 ### Answer:
@@ -64,7 +64,7 @@ FROM public.all_sessions
 ### SQL Queries:
 
 ```SQL
-SELECT count (pagePathLevel1)
+SELECT COUNT (pagePathLevel1)
 FROM public.all_sessions
 WHERE pagePathLevel1 = '/google+redesign/'
 ```
