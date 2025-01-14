@@ -71,11 +71,40 @@ Answer:
 
 ### SQL Query:
 
+```sql
+CREATE VIEW questions3and4 AS
+SELECT
+    country,
+	city,
+    "productQuantity",
+    "productPrice",
+    "v2ProductCategory",
+    "productSKU"
+FROM
+    public.all_sessions
+WHERE
+   "productQuantity" > 0
+```
+```sql
+SELECT 
+    "productSKU",
+    country,
+	city,
+    "productQuantity",
+    "productPrice",
+    "v2ProductCategory",
+    p.name
+FROM 
+    questions3and4 q3 
+INNER JOIN 
+    products p
+ON 
+    q3."productSKU" = "SKU"
+ORDER BY country
+```
 
 ### Answer:
-
-
-
+Visitors from USA order many security cameras, thermostats and smoke alarms.
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
