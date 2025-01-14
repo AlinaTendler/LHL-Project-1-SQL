@@ -33,9 +33,9 @@ Top-5 products by Popularity:
 ```SQL
 SELECT distinct productSKU, productPrice, orderedQuantity, SUM(productPrice*orderedQuantity), p.name 
 FROM public.all_sessions a
-JOIN public.products p ON productSKU"=SKU
-GROUP BY productSKU,productPrice, orderedQuantity, p.name
-ORDER BY SUM("productPrice"*"orderedQuantity") DESC
+JOIN public.products p ON productSKU = SKU
+GROUP BY productSKU, productPrice, orderedQuantity, p.name
+ORDER BY SUM(productPrice * orderedQuantity) DESC
 ```
 
 ### Answer:
