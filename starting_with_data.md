@@ -85,11 +85,11 @@ ORDER BY count("channelGrouping") DESC
 
 ### Answer:
 
-"Organic Search" -	75557
-"Referral"-	28381
-"Direct" - 25545
-"Social" - 11662
-"Paid Search" -	4649
-"Affiliates" -	1688
-"Display"	- 1158
-"(Other)"	- 2
+1. Organic Search -	75557
+2. Referral -	28381
+3. Direct - 25545
+4. Social - 11662
+5. Paid Search -	4649
+6. Affiliates -	1688
+7. Display	- 1158
+8. (Other)	- 2
