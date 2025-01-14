@@ -174,6 +174,8 @@ where productSKU like '9%'
 
 
 
+### products
 
+1. total_ordered column deleted, since it has only 11 values, and orderedQuantity has 1087 values.
 
 
