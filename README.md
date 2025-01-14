@@ -23,7 +23,16 @@ This is a training project. The main goal is to perform the following actions us
      5) What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
      6) Can we summarize the impact of revenue generated from each city/country?
 
-  5. Looking for new insights from the data
+  5. Looking for new insights from the data. Analyzing and trying to get 5 more useful question-answers from the data.
+  6. Data QA. Checking for:
+       - Improper characters (i.e. ${% in categories name)
+       - Incorrect formatting (i.e. date as varchar)
+       - Non-null missing values (i.e. like (not set) or (not available in demo version))
+       - Impossible/ Outlier values (i.e. prices of millions of dollars)
+       - Misaligned values (i.e. revenue and product of quantity and price)
+       - Duplicated rows (i.e. rows with the same visitID)
+And many, many more!
+  7. ERD Generation. Please see the pic
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
@@ -31,5 +40,5 @@ This is a training project. The main goal is to perform the following actions us
 There was no documentation, so it was hard to understand what each column represented only by its name. Logically, visitorID should be a unique value in all_sessions and analytics, but analytics, for example, had over 4 000 000 duplicates by visitorID. 
  
 ## Future Goals
-If it were a real task, I would doubt the data's reliability and thoroughly check how it was gained and processed. All the results I received are not reliable. Also, if I had more time, I would check "full-duplicates" instead of relying on logic and deleting duplicates by visitID. 
-
+If it were a real task, I would doubt the data's reliability and thoroughly check how it was gained and processed. All the results I received are not reliable. Also, if I had more time, I would check "full-duplicates" instead of relying on logic and deleting duplicates by visitID. And I would resolve the issue with the Primary Key because I have 1 primary key for two tables.
+And I would check misaligned values like revenue and product of quantity and price.
