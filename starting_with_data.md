@@ -48,13 +48,16 @@ Top-5 products by Revenue:
 "Cam Outdoor Security Camera - USA"
 "Cam Indoor Security Camera - USA"
 
-## Question 3: 
+## Question 3: Is our data results for cities/countries reliable?
 
 ### SQL Queries:
 
+```SQL
+SELECT count(*), count(country) AS country, count(city) AS city
+FROM public.all_sessions
+```
 ### Answer:
-
-
+14172 - rows overall,	14172 - rows with non-null country and only 6069 rows with non-null city. We can't rely on any results based on the city.
 
 ## Question 4: 
 
