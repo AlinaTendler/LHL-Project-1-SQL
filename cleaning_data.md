@@ -144,3 +144,36 @@ WHERE p.SKU IS NULL
 DROP TABLE sales_by_sku
 ```
 
+### all_sessions table
+
+1. productPrice and totalTransactionRevenue divided by 1000000, without a new column:
+
+```SQL
+UPDATE public.all_sessions SET productPrice = productPrice/1000000::numeric(10,2)
+```
+
+```SQL
+UPDATE public.all_sessions SET totalTransactionRevenue = totalTransactionRevenue/1000000
+```
+
+2. VisitID is assigned as the Primary Key
+
+```SQL
+ALTER TABLE all_sessions COLUMN visitID SERIAL PRIMARY KEY;
+```
+ 
+3. Records where SKU starts with 9 didn’t have price and most of the data, deleted them
+
+```SQL
+DELETE FROM public.all_sessions
+where productSKU like '9%'
+```
+
+4. Transactionrevenue in all_sesseions had only 4 values, deleted. Transactionid had 8 values, deleted too.
+5. Duplicating rows deleted
+
+
+
+
+
+
