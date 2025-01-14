@@ -68,7 +68,7 @@ Answer:
 
 
 ## Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
-
+## +Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
 ### SQL Query:
 
 ```sql
@@ -105,19 +105,6 @@ ORDER BY country
 
 ### Answer:
 Visitors from USA order many security cameras, thermostats and smoke alarms.
-
-
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
-
-
-SQL Queries:
-
-
-
-Answer:
-
-
-
 
 
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
