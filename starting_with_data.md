@@ -57,15 +57,19 @@ SELECT count(*), count(country) AS country, count(city) AS city
 FROM public.all_sessions
 ```
 ### Answer:
-14172 - rows overall,	14172 - rows with non-null country and only 6069 rows with non-null city. We can't rely on any results based on the city.
+14172 - rows overall,	14172 - rows with non-null country, and only 6069 rows with non-null city. We can't rely on any results based on the city.
 
-## Question 4: 
+## Question 4: Is everything okay with URLs in our data?
 
 ### SQL Queries:
 
+```SQL
+SELECT count (pagePathLevel1) from public.all_sessions
+where pagePathLevel1 = '/google+redesign/'
+```
+
 ### Answer:
-
-
+13401 rows out of 14172 have the same value '/google+redesign/'. So we can't use this column for analyze.
 
 ## Question 5: 
 
