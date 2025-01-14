@@ -18,10 +18,10 @@ This is a training project. The main goal is to perform the following actions us
   4. Answering questions:
      
      1) Which cities and countries have the highest level of transaction revenues on the site?
-     2) What is the average number of products ordered from visitors in each city and country?
-     3) Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
-     4) What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
-     5) Can we summarize the impact of revenue generated from each city/country?
+     3) What is the average number of products ordered from visitors in each city and country?
+     4) Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
+     5) What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
+     6) Can we summarize the impact of revenue generated from each city/country?
 
   5. Looking for new insights from the data
 ## Results
@@ -31,4 +31,5 @@ This is a training project. The main goal is to perform the following actions us
 There was no documentation, so it was hard to understand what each column represented only by its name. Logically, visitorID should be a unique value in all_sessions and analytics, but analytics, for example, had over 4 000 000 duplicates by visitorID. 
  
 ## Future Goals
-If it was a real task, I would doubt the reliability of the data and check thoroughly how it was gained and processed. All the results I received don't seem to be reliable.
+If it were a real task, I would doubt the data's reliability and thoroughly check how it was gained and processed. All the results I received are not reliable. Also, if I had more time, I would check "full-duplicates" instead of relying on logic and deleting duplicates by visitID. 
+
